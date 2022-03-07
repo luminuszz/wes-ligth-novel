@@ -69,9 +69,7 @@ export class PuppeteerWebScraperService implements WebScraperService {
 
     const pdfPagesCont = currentPDf.getPageCount();
 
-    await currentPDf.removePage(0);
-
-    await currentPDf.removePage(pdfPagesCont - 2);
+    await currentPDf.removePage(pdfPagesCont - 1);
 
     const formattedPDF = await currentPDf.save();
 
